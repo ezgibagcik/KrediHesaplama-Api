@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RmJfAka6XYM+78ZcJhTW2emYeRbTh1AtmfepH7HO0H3oI+xNWBw0Ssnpvmk7mcBk5HmfcwjLk5Zffilz1UowFA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ezgib\\source\\repos\\Staj\\EntityLayer\\EntityLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ezgib\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.9\\microsoft.aspnetcore.http.features.5.0.9.nupkg.sha512",
+    "C:\\Users\\ezgib\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\ezgib\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
