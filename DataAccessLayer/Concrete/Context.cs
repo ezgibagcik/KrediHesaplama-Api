@@ -15,10 +15,9 @@ namespace DataAccessLayer.Concrete
             optionsBuilder.UseSqlServer("server=EZGIBAGCIK; database=KrediHesaplama; integrated security=true;");
         }
         public DbSet<Bank> Bank { get; set; }
-        public DbSet<InterestRate> InterestRate { get; set; }
         public DbSet<LoanType> LoanType { get; set; }
         public DbSet<PaymentPlan> PaymentPlan { get; set; }
-        public DbSet<LoanApplication> LoanApplication { get; set; }
+        public DbSet<CreditApplication> CreditApplication { get; set; }
 
     }
 }

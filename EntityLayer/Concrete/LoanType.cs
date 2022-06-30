@@ -13,6 +13,5 @@ namespace EntityLayer.Concrete
         public int LoanCode{ get; set; }
         public string TypeName { get; set; }
         public string TypeAbout { get; set; }
-        public List<InterestRate> InterestRate { get; set; }
     }
 }

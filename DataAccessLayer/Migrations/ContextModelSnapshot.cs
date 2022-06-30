@@ -58,44 +58,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Bank");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.InterestRate", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BankId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("InterestPercent")
-                        .HasColumnType("float");
-
-                    b.Property<int>("LoanTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaxCreditCost")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaxTerm")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MinCreditCost")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MinTerm")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BankId");
-
-                    b.HasIndex("LoanTypeId");
-
-                    b.ToTable("InterestRate");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.LoanApplication", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.CreditApplication", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -108,11 +71,11 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("InstallmentAmount")
-                        .HasColumnType("float");
+                    b.Property<string>("InstallmentAmount")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("LoanTerm")
-                        .HasColumnType("int");
+                    b.Property<string>("LoanTerm")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LoanType")
                         .HasColumnType("nvarchar(max)");
@@ -122,7 +85,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LoanApplication");
+                    b.ToTable("CreditApplication");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.LoanType", b =>
@@ -183,35 +146,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PaymentPlan");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.InterestRate", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Bank", "Bank")
-                        .WithMany("InterestRate")
-                        .HasForeignKey("BankId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EntityLayer.Concrete.LoanType", "LoanType")
-                        .WithMany("InterestRate")
-                        .HasForeignKey("LoanTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Bank");
-
-                    b.Navigation("LoanType");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Bank", b =>
-                {
-                    b.Navigation("InterestRate");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.LoanType", b =>
-                {
-                    b.Navigation("InterestRate");
                 });
 #pragma warning restore 612, 618
         }

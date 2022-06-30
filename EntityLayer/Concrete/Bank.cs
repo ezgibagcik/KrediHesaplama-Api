@@ -19,6 +19,5 @@ namespace EntityLayer.Concrete
         public int SubeSayisi { get; set; }
         public string BankaUrl { get; set; }
         public string BankaImage { get; set; }
-        public List<InterestRate> InterestRate { get; set; }
     }
 }

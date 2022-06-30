@@ -1,6 +1,6 @@
-using Api.Services.EmailService;
-using Api.Models;
-using MailKit;
+//using Api.Services.EmailService;
+//using Api.Models;
+//using MailKit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+//using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace Api
         {
             //services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
             //services.AddTransient<IMailService, Services.MailService>();
-            services.AddScoped<IEmailService, EmailService>();
+            //services.AddScoped<IEmailService, EmailService>();
             services.AddCors();
             services.AddControllers();
 
